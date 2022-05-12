@@ -23,11 +23,7 @@ public class IndexController {
 
     @RequestMapping({"","/","/index"})
     public String getIndexPage(Model model){
-        System.out.println("Hello World I how long will this take");
-
         model.addAttribute("recipes",recipeService.getRecipes());
-
-
         return "index";
     }
 }
