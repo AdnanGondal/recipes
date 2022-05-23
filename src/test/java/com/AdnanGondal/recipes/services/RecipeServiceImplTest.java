@@ -1,5 +1,7 @@
 package com.AdnanGondal.recipes.services;
 
+import com.AdnanGondal.recipes.converters.RecipeCommandToRecipe;
+import com.AdnanGondal.recipes.converters.RecipeToRecipeCommand;
 import com.AdnanGondal.recipes.models.Recipe;
 import com.AdnanGondal.recipes.repositories.RecipeRepository;
 import org.junit.jupiter.api.BeforeEach;
@@ -21,10 +23,17 @@ class RecipeServiceImplTest {
     @Mock
     RecipeRepository recipeRepository;
 
+    @Mock
+    RecipeToRecipeCommand recipeToRecipeCommand;
+
+    @Mock
+    RecipeCommandToRecipe recipeCommandToRecipe;
+
+
     @BeforeEach
     void setUp() {
         MockitoAnnotations.openMocks(this);
-        recipeService = new RecipeServiceImpl(recipeRepository);
+        recipeService = new RecipeServiceImpl(recipeRepository, recipeCommandToRecipe, recipeToRecipeCommand);
     }
 
     @Test

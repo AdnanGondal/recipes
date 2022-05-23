@@ -15,6 +15,8 @@ public class Recipe {
     private Integer cookTime;
     private String source;
     private String url;
+    private Integer servings;
+
 
     @Lob
     private String directions;
@@ -140,5 +142,13 @@ public class Recipe {
 
     public void setDifficulty(Difficulty difficulty) {
         this.difficulty = difficulty;
+    }
+
+    public Integer getServings() {
+        return servings;
+    }
+
+    public void setServings(Integer servings) {
+        this.servings = servings;
     }
 }

@@ -4,12 +4,10 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
-
-@Getter
 @Setter
+@Getter
 @NoArgsConstructor
-public class NotesCommand {
+public class CategoryCommand {
     private Long id;
-    private String recipeNotes;
-
+    private String description;
 }
